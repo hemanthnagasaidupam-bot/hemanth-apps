@@ -1,4 +1,4 @@
-const CACHE = "hemanth-dashboard-v3";
+const CACHE = "hemanth-dashboard-v4";
 const ASSETS = [
   "./",
   "./index.html",

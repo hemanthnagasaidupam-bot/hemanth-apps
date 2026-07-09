@@ -73,6 +73,17 @@
   #checklistApp .item.done .name { text-decoration: line-through; color: #9a938a; }
   #checklistApp .streak { font-size: 12px; color: #b0603a; font-weight: 600; white-space: nowrap; }
   #checklistApp .streak.zero { color: #b3aea3; }
+  #checklistApp .habit-remove {
+    border: none; background: transparent; color: #c7c2b8; cursor: pointer; font-size: 13px; padding: 2px 4px; line-height: 1;
+  }
+  #checklistApp .habit-remove:hover { color: #b0603a; }
+  #checklistApp .add-habit-row { display: flex; gap: 6px; margin-top: 10px; }
+  #checklistApp .add-habit-row input {
+    flex: 1; padding: 8px 10px; border: 1px solid #e0ddd6; border-radius: 8px; font-size: 13px;
+  }
+  #checklistApp .add-habit-row button {
+    border: none; background: #2f2a26; color: #fff; border-radius: 8px; padding: 0 14px; font-size: 13px; cursor: pointer;
+  }
   #checklistApp .section-title { font-size: 13px; font-weight: 650; color: #7a7a75; text-transform: uppercase; letter-spacing: .04em; margin: 26px 0 10px 2px; }
   #checklistApp .week {
     background: #fff; border: 1px solid #e8e6e1; border-radius: 14px; padding: 16px 18px; overflow-x: auto;
@@ -228,6 +239,11 @@
 
       <div class="list" id="list"></div>
 
+      <div class="add-habit-row">
+        <input id="newHabitInput" placeholder="Add objective…">
+        <button id="addHabitBtn">Add</button>
+      </div>
+
       <div class="section-title">Last 7 Days</div>
       <div class="week">
         <table id="weekTable"></table>
@@ -357,7 +373,7 @@
 <script>
 // ================= CHECKLIST DASHBOARD LOGIC =================
 (function () {
-  const HABITS = [
+  const DEFAULT_HABITS = [
     "Wake up at 7AM",
     "Gym Workout",
     "Creatine",
@@ -371,7 +387,20 @@
   ];
 
   const STORAGE_KEY = "hemanth_habit_history_v2";
+  const HABITS_KEY = "hemanth_habit_list_v1";
   const START_DATE = "2026-07-06"; // Monday — tracking begins here, all prior data reset
+
+  function loadHabits() {
+    try {
+      const raw = JSON.parse(localStorage.getItem(HABITS_KEY));
+      if (Array.isArray(raw) && raw.length) return raw;
+    } catch (e) {}
+    return DEFAULT_HABITS.slice();
+  }
+  function saveHabits() {
+    localStorage.setItem(HABITS_KEY, JSON.stringify(HABITS));
+  }
+  let HABITS = loadHabits();
 
   function loadHistory() {
     try {
@@ -451,6 +480,18 @@
         <div class="name">${habit}</div>
         <div class="streak ${streak === 0 ? 'zero' : ''}">${streak > 0 ? streak + ' day streak' : 'no streak'}</div>
       `;
+      const removeBtn = document.createElement('button');
+      removeBtn.className = 'habit-remove';
+      removeBtn.textContent = '✕';
+      removeBtn.title = 'Remove objective';
+      removeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const idx = HABITS.indexOf(habit);
+        if (idx !== -1) HABITS.splice(idx, 1);
+        saveHabits();
+        render();
+      });
+      item.appendChild(removeBtn);
       item.addEventListener('click', () => {
         history[today][habit] = !history[today][habit];
         saveHistory(history);
@@ -459,7 +500,7 @@
       list.appendChild(item);
     });
 
-    const pct = Math.round((doneCount / HABITS.length) * 100);
+    const pct = HABITS.length ? Math.round((doneCount / HABITS.length) * 100) : 0;
     document.getElementById('pctText').textContent = pct + '%';
     document.getElementById('countText').textContent = `${doneCount} / ${HABITS.length} done today`;
     document.getElementById('barFill').style.width = pct + '%';
@@ -556,6 +597,16 @@
     const overallPct = totalPossible ? Math.round((totalDone / totalPossible) * 100) : 0;
     document.getElementById(overallElId).textContent = overallPct + '%';
   }
+
+  document.getElementById('addHabitBtn').addEventListener('click', () => {
+    const input = document.getElementById('newHabitInput');
+    const name = input.value.trim();
+    if (!name) return;
+    HABITS.push(name);
+    input.value = '';
+    saveHabits();
+    render();
+  });
 
   render();
 })();

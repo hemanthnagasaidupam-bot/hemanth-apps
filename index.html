@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Fitness Tracker</title>
-<link rel="manifest" href="data:application/manifest+json;base64,ewogICJuYW1lIjogIkZpdG5lc3MgVHJhY2tlciIsCiAgInNob3J0X25hbWUiOiAiRml0bmVzcyBUcmFja2VyIiwKICAiZGVzY3JpcHRpb24iOiAiRGFpbHkgaGFiaXQgY2hlY2tsaXN0IGFuZCB3b3Jrb3V0IHRyYWNrZXIgaW4gb25lIGFwcC4iLAogICJzdGFydF91cmwiOiAiLi9pbmRleC5odG1sIiwKICAic2NvcGUiOiAiLi8iLAogICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLAogICJvcmllbnRhdGlvbiI6ICJwb3J0cmFpdCIsCiAgImJhY2tncm91bmRfY29sb3IiOiAiI2Y3ZjdmNSIsCiAgInRoZW1lX2NvbG9yIjogIiNiMDYwM2EiLAogICJpY29ucyI6IFsKICAgIHsgInNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUI0Yld4dWN6MGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TUM5emRtY2lJSGRwWkhSb1BTSTFNVElpSUdobGFXZG9kRDBpTlRFeUlpQjJhV1YzUW05NFBTSXdJREFnTlRFeUlEVXhNaUkrQ2lBZ1BISmxZM1FnZDJsa2RHZzlJalV4TWlJZ2FHVnBaMmgwUFNJMU1USWlJSEo0UFNJNU5pSWdabWxzYkQwaUkySXdOakF6WVNJdlBnb2dJRHh5WldOMElIZzlJakV5TmlJZ2VUMGlNakl3SWlCM2FXUjBhRDBpTXpZaUlHaGxhV2RvZEQwaU56SWlJSEo0UFNJeE1DSWdabWxzYkQwaUkyWm1abVptWmlJdlBnb2dJRHh5WldOMElIZzlJakUyTWlJZ2VUMGlNak15SWlCM2FXUjBhRDBpTWpRaUlHaGxhV2RvZEQwaU5EZ2lJSEo0UFNJM0lpQm1hV3hzUFNJalptWm1abVptSWk4K0NpQWdQSEpsWTNRZ2VEMGlNVGcySWlCNVBTSXlORGNpSUhkcFpIUm9QU0l4TkRBaUlHaGxhV2RvZEQwaU1UZ2lJSEo0UFNJNUlpQm1hV3hzUFNJalptWm1abVptSWk4K0NpQWdQSEpsWTNRZ2VEMGlNekkySWlCNVBTSXlNeklpSUhkcFpIUm9QU0l5TkNJZ2FHVnBaMmgwUFNJME9DSWdjbmc5SWpjaUlHWnBiR3c5SWlObVptWm1abVlpTHo0S0lDQThjbVZqZENCNFBTSXpOVEFpSUhrOUlqSXlNQ0lnZDJsa2RHZzlJak0ySWlCb1pXbG5hSFE5SWpjeUlpQnllRDBpTVRBaUlHWnBiR3c5SWlObVptWm1abVlpTHo0S1BDOXpkbWMrQ2c9PSIsICJzaXplcyI6ICJhbnkiLCAidHlwZSI6ICJpbWFnZS9zdmcreG1sIiwgInB1cnBvc2UiOiAiYW55IiB9LAogICAgeyAic3JjIjogImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QjRiV3h1Y3owaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNQzl6ZG1jaUlIZHBaSFJvUFNJMU1USWlJR2hsYVdkb2REMGlOVEV5SWlCMmFXVjNRbTk0UFNJd0lEQWdOVEV5SURVeE1pSStDaUFnUEhKbFkzUWdkMmxrZEdnOUlqVXhNaUlnYUdWcFoyaDBQU0kxTVRJaUlISjRQU0k1TmlJZ1ptbHNiRDBpSTJJd05qQXpZU0l2UGdvZ0lEeHlaV04wSUhnOUlqRXlOaUlnZVQwaU1qSXdJaUIzYVdSMGFEMGlNellpSUdobGFXZG9kRDBpTnpJaUlISjRQU0l4TUNJZ1ptbHNiRDBpSTJabVptWm1aaUl2UGdvZ0lEeHlaV04wSUhnOUlqRTJNaUlnZVQwaU1qTXlJaUIzYVdSMGFEMGlNalFpSUdobGFXZG9kRDBpTkRnaUlISjRQU0kzSWlCbWFXeHNQU0lqWm1abVptWm1JaTgrQ2lBZ1BISmxZM1FnZUQwaU1UZzJJaUI1UFNJeU5EY2lJSGRwWkhSb1BTSXhOREFpSUdobGFXZG9kRDBpTVRnaUlISjRQU0k1SWlCbWFXeHNQU0lqWm1abVptWm1JaTgrQ2lBZ1BISmxZM1FnZUQwaU16STJJaUI1UFNJeU16SWlJSGRwWkhSb1BTSXlOQ0lnYUdWcFoyaDBQU0kwT0NJZ2NuZzlJamNpSUdacGJHdzlJaU5tWm1abVptWWlMejRLSUNBOGNtVmpkQ0I0UFNJek5UQWlJSGs5SWpJeU1DSWdkMmxrZEdnOUlqTTJJaUJvWldsbmFIUTlJamN5SWlCeWVEMGlNVEFpSUdacGJHdzlJaU5tWm1abVptWWlMejRLUEM5emRtYytDZz09IiwgInNpemVzIjogImFueSIsICJ0eXBlIjogImltYWdlL3N2Zyt4bWwiLCAicHVycG9zZSI6ICJtYXNrYWJsZSIgfQogIF0KfQo=">
+<link rel="manifest" href="data:application/manifest+json;base64,ewogICJuYW1lIjogIkZpdG5lc3MgVHJhY2tlciIsCiAgInNob3J0X25hbWUiOiAiRml0bmVzcyBUcmFja2VyIiwKICAiZGVzY3JpcHRpb24iOiAiRGFpbHkgaGFiaXQgY2hlY2tsaXN0IGFuZCB3b3Jrb3V0IHRyYWNrZXIgaW4gb25lIGFwcC4iLAogICJzdGFydF91cmwiOiAiLi9pbmRleC5odG1sIiwKICAic2NvcGUiOiAiLi8iLAogICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLAogICJvcmllbnRhdGlvbiI6ICJwb3J0cmFpdCIsCiAgImJhY2tncm91bmRfY29sb3IiOiAiI2Y3ZjdmNSIsCiAgInRoZW1lX2NvbG9yIjogIiNiMDYwM2EiLAogICJpY29ucyI6IFsKICAgIHsgInNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUI0Yld4dWN6MGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TUM5emRtY2lJSGRwWkhSb1BTSTFNVElpSUdobGFXZG9kRDBpTlRFeUlpQjJhV1YzUW05NFBTSXdJREFnTlRFeUlEVXhNaUkrQ2lBZ1BISmxZM1FnZDJsa2RHZzlJalV4TWlJZ2FHVnBaMmgwUFNJMU1USWlJSEo0UFNJNU5pSWdabWxzYkQwaUkySXdOakF6WVNJdlBnb2dJRHh5WldOMElIZzlJakV5TmlJZ2VUMGlNakl3SWlCM2FXUjBhRDBpTXpZaUlHaGxhV2RvZEQwaU56SWlJSEo0UFNJeE1DSWdabWxzYkQwaUkyWm1abVptWmlJdlBnb2dJRHh5WldOMElIZzlJakUyTWlJZ2VUMGlNak15SWlCM2FXUjBhRDBpTWpRaUlHaGxhV2RvZEQwaU5EZ2lJSEo0UFNJM0lpQm1hV3hzUFNJalptWm1abVptSWk4K0NpQWdQSEpsWTNRZ2VEMGlNVGcySWlCNVBTSXlORGNpSUhkcFpIUm9QU0l4TkRBaUlHaGxhV2RvZEQwaU1UZ2lJSEo0UFNJNUlpQm1hV3hzUFNJalptWm1abVptSWk4K0NpQWdQSEpsWTNRZ2VEMGlNekkySWlCNVBTSXlNeklpSUhkcFpIUm9QU0l5TkNJZ2FHVnBaMmgwUFNJME9DSWdjbmc5SWpjaUlHWnBiR3c5SWlObVptWm1abVlpTHo0S0lDQThjbVZqZENCNFBTSXpOVEFpSUhrOUlqSXlNQ0lnZDJsa2RHZzlJak0ySWlCb1pXbG5hSFE5SWpjeUlpQnllRDBpTVRBaUlHWnBiR3c5SWlObVptWm1abVlpTHo0S1BDOXpkbWMrQ2c9PSIsICJzaXplcyI6ICIxOTJ4MTkyIDUxMng1MTIiLCAidHlwZSI6ICJpbWFnZS9zdmcreG1sIiwgInB1cnBvc2UiOiAiYW55IiB9LAogICAgeyAic3JjIjogImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QjRiV3h1Y3owaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNQzl6ZG1jaUlIZHBaSFJvUFNJMU1USWlJR2hsYVdkb2REMGlOVEV5SWlCMmFXVjNRbTk0UFNJd0lEQWdOVEV5SURVeE1pSStDaUFnUEhKbFkzUWdkMmxrZEdnOUlqVXhNaUlnYUdWcFoyaDBQU0kxTVRJaUlISjRQU0k1TmlJZ1ptbHNiRDBpSTJJd05qQXpZU0l2UGdvZ0lEeHlaV04wSUhnOUlqRXlOaUlnZVQwaU1qSXdJaUIzYVdSMGFEMGlNellpSUdobGFXZG9kRDBpTnpJaUlISjRQU0l4TUNJZ1ptbHNiRDBpSTJabVptWm1aaUl2UGdvZ0lEeHlaV04wSUhnOUlqRTJNaUlnZVQwaU1qTXlJaUIzYVdSMGFEMGlNalFpSUdobGFXZG9kRDBpTkRnaUlISjRQU0kzSWlCbWFXeHNQU0lqWm1abVptWm1JaTgrQ2lBZ1BISmxZM1FnZUQwaU1UZzJJaUI1UFNJeU5EY2lJSGRwWkhSb1BTSXhOREFpSUdobGFXZG9kRDBpTVRnaUlISjRQU0k1SWlCbWFXeHNQU0lqWm1abVptWm1JaTgrQ2lBZ1BISmxZM1FnZUQwaU16STJJaUI1UFNJeU16SWlJSGRwWkhSb1BTSXlOQ0lnYUdWcFoyaDBQU0kwT0NJZ2NuZzlJamNpSUdacGJHdzlJaU5tWm1abVptWWlMejRLSUNBOGNtVmpkQ0I0UFNJek5UQWlJSGs5SWpJeU1DSWdkMmxrZEdnOUlqTTJJaUJvWldsbmFIUTlJamN5SWlCeWVEMGlNVEFpSUdacGJHdzlJaU5tWm1abVptWWlMejRLUEM5emRtYytDZz09IiwgInNpemVzIjogIjUxMng1MTIiLCAidHlwZSI6ICJpbWFnZS9zdmcreG1sIiwgInB1cnBvc2UiOiAibWFza2FibGUiIH0KICBdCn0K">
 <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+CiAgPHJlY3Qgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHJ4PSI5NiIgZmlsbD0iI2IwNjAzYSIvPgogIDxyZWN0IHg9IjEyNiIgeT0iMjIwIiB3aWR0aD0iMzYiIGhlaWdodD0iNzIiIHJ4PSIxMCIgZmlsbD0iI2ZmZmZmZiIvPgogIDxyZWN0IHg9IjE2MiIgeT0iMjMyIiB3aWR0aD0iMjQiIGhlaWdodD0iNDgiIHJ4PSI3IiBmaWxsPSIjZmZmZmZmIi8+CiAgPHJlY3QgeD0iMTg2IiB5PSIyNDciIHdpZHRoPSIxNDAiIGhlaWdodD0iMTgiIHJ4PSI5IiBmaWxsPSIjZmZmZmZmIi8+CiAgPHJlY3QgeD0iMzI2IiB5PSIyMzIiIHdpZHRoPSIyNCIgaGVpZ2h0PSI0OCIgcng9IjciIGZpbGw9IiNmZmZmZmYiLz4KICA8cmVjdCB4PSIzNTAiIHk9IjIyMCIgd2lkdGg9IjM2IiBoZWlnaHQ9IjcyIiByeD0iMTAiIGZpbGw9IiNmZmZmZmYiLz4KPC9zdmc+Cg==" type="image/svg+xml">
 <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+CiAgPHJlY3Qgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHJ4PSI5NiIgZmlsbD0iI2IwNjAzYSIvPgogIDxyZWN0IHg9IjEyNiIgeT0iMjIwIiB3aWR0aD0iMzYiIGhlaWdodD0iNzIiIHJ4PSIxMCIgZmlsbD0iI2ZmZmZmZiIvPgogIDxyZWN0IHg9IjE2MiIgeT0iMjMyIiB3aWR0aD0iMjQiIGhlaWdodD0iNDgiIHJ4PSI3IiBmaWxsPSIjZmZmZmZmIi8+CiAgPHJlY3QgeD0iMTg2IiB5PSIyNDciIHdpZHRoPSIxNDAiIGhlaWdodD0iMTgiIHJ4PSI5IiBmaWxsPSIjZmZmZmZmIi8+CiAgPHJlY3QgeD0iMzI2IiB5PSIyMzIiIHdpZHRoPSIyNCIgaGVpZ2h0PSI0OCIgcng9IjciIGZpbGw9IiNmZmZmZmYiLz4KICA8cmVjdCB4PSIzNTAiIHk9IjIyMCIgd2lkdGg9IjM2IiBoZWlnaHQ9IjcyIiByeD0iMTAiIGZpbGw9IiNmZmZmZmYiLz4KPC9zdmc+Cg==">
 <meta name="theme-color" content="#b0603a">
@@ -123,6 +123,13 @@
     display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; flex-wrap: wrap; gap: 8px;
   }
   #workoutApp .current-week-label { font-size: 15px; font-weight: 700; color: #2f2a26; }
+  #workoutApp .week-nav { display: flex; align-items: center; gap: 8px; }
+  #workoutApp .week-nav-btn {
+    border: 1px solid #e8e6e1; background: #fff; color: #4a463f;
+    width: 28px; height: 28px; border-radius: 999px; font-size: 15px; font-weight: 700; cursor: pointer;
+    display: flex; align-items: center; justify-content: center; line-height: 1;
+  }
+  #workoutApp .week-nav-btn:disabled { opacity: 0.35; cursor: default; }
   #workoutApp .new-week-btn {
     border: 1px solid #ecd3c3; background: #fbf3ee; color: #b0603a;
     padding: 7px 12px; border-radius: 999px; font-size: 12px; font-weight: 600; cursor: pointer;
@@ -262,7 +269,11 @@
     <!-- LOG VIEW -->
     <div class="view active" id="view-log">
       <div class="current-week-row">
-        <span class="current-week-label" id="currentWeekLabel"></span>
+        <div class="week-nav">
+          <button class="week-nav-btn" id="prevWeekBtn" title="Previous week">‹</button>
+          <span class="current-week-label" id="currentWeekLabel"></span>
+          <button class="week-nav-btn" id="nextWeekBtn" title="Next week">›</button>
+        </div>
         <button class="new-week-btn" id="newWeekBtn">Start New Week →</button>
       </div>
       <div class="pill-group">
@@ -370,10 +381,13 @@
   function saveHistory(h) {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(h));
   }
+  function localDateKey(d) {
+    return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+  }
   function todayKey(offsetDays = 0) {
     const d = new Date();
     d.setDate(d.getDate() + offsetDays);
-    return d.toISOString().slice(0, 10);
+    return localDateKey(d);
   }
   function fmtLabel(dateStr) {
     const d = new Date(dateStr + "T00:00:00");
@@ -488,7 +502,7 @@
   }
 
   function dateKey(d) {
-    return d.toISOString().slice(0, 10);
+    return localDateKey(d);
   }
 
   function renderPeriodSummary() {
@@ -563,10 +577,13 @@
     const d = new Date(dateStr + "T00:00:00");
     return d.toLocaleDateString(undefined, { month: "short", day: "numeric" });
   }
+  function localDateKey(d) {
+    return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+  }
   function addDays(dateStr, n) {
     const d = new Date(dateStr + "T00:00:00");
     d.setDate(d.getDate() + n);
-    return d.toISOString().slice(0, 10);
+    return localDateKey(d);
   }
 
   function loadData() {
@@ -588,6 +605,25 @@
     view: "log",
   };
   state.weekIdx = state.weeks.length - 1;
+
+  // Open on whichever cycle/day's date matches today, if one exists.
+  (function selectToday() {
+    const todayStr = localDateKey(new Date());
+    for (let wi = state.weeks.length - 1; wi >= 0; wi--) {
+      const cycles = state.weeks[wi].cycles;
+      for (let ci = 0; ci < cycles.length; ci++) {
+        const days = cycles[ci].days;
+        for (let di = 0; di < days.length; di++) {
+          if (days[di].date === todayStr) {
+            state.weekIdx = wi;
+            state.cycleIdx = ci;
+            state.dayIdx = di;
+            return;
+          }
+        }
+      }
+    }
+  })();
 
   let progressChart = null, bwChart = null, volumeChart = null;
 
@@ -629,13 +665,25 @@
   });
 
   function renderCurrentWeekLabel() {
-    state.weekIdx = state.weeks.length - 1;
     const week = state.weeks[state.weekIdx];
     const allDays = week.cycles.flatMap(c => c.days);
     const first = allDays[0].date, last = allDays[allDays.length - 1].date;
+    const isLatest = state.weekIdx === state.weeks.length - 1;
     document.getElementById("currentWeekLabel").textContent =
-      `${week.label} (current) · ${fmtShortDate(first)} – ${fmtShortDate(last)}`;
+      `${week.label}${isLatest ? " (current)" : ""} · ${fmtShortDate(first)} – ${fmtShortDate(last)}`;
+    document.getElementById("prevWeekBtn").disabled = state.weekIdx === 0;
+    document.getElementById("nextWeekBtn").disabled = isLatest;
   }
+
+  function goToWeek(newWeekIdx) {
+    if (newWeekIdx < 0 || newWeekIdx >= state.weeks.length) return;
+    state.weekIdx = newWeekIdx;
+    state.cycleIdx = 0;
+    state.dayIdx = 0;
+    renderLog();
+  }
+  document.getElementById("prevWeekBtn").addEventListener("click", () => goToWeek(state.weekIdx - 1));
+  document.getElementById("nextWeekBtn").addEventListener("click", () => goToWeek(state.weekIdx + 1));
 
   function addWeek() {
     const last = state.weeks[state.weeks.length - 1];
